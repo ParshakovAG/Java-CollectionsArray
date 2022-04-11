@@ -12,6 +12,14 @@ public class TwoDimensionalArray {
         // [ , X,  ]
         // [X,  , X]
 
-        return new char[0][0];
+        char[][] symbol = new char[size][size];
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                symbol[i][j] = (i == j) || (i + j == size - 1) ? SYMBOL : ' ';
+            }
+            System.out.println(symbol[i]);
+        }
+
+        return symbol;
     }
 }
